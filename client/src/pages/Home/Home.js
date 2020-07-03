@@ -15,7 +15,8 @@ const useStyles = makeStyles({
     maxWidth: 345,
   },
   media: {
-    height: 140,
+    height: 400,
+    width: 400
   },
 })
 
@@ -34,9 +35,28 @@ const Home = () => {
     event.preventDefault()
     axios.get(`/api/googlebooks/${bookState.search}`)
       .then(({ data }) => {
+        console.log(data)
         setBookState({ ...bookState, books: data })
       })
       .catch(err => console.error(err))
+  }
+
+  bookState.handleSaveBook = book => {
+    console.log(book)
+    axios.post('/api/books', {
+      title: book.volumeInfo.title,
+      authors: book.volumeInfo.authors[0],
+      description: book.volumeInfo.description,
+      image: book.volumeInfo.imageLinks.thumbnail,
+      link: book.volumeInfo.infoLink,
+      bookId: book.id
+    })
+    .then(() => {
+      const books = bookState.books
+      const booksFiltered = books.filter(bewk => bewk.id !== book.id)
+      setBookState({ ...bookState, books: booksFiltered})
+    })
+    .catch(err => console.error(err) )
   }
 
   return(
@@ -63,13 +83,19 @@ const Home = () => {
               />
                 <CardMedia
                   className={classes.media}
-                  image={book.volumeInfo.imageLinks.smallThumbnail}
+                  image={book.volumeInfo.imageLinks.thumbnail}
                   title={book.volumeInfo.title}
                 />
 
               <CardActions>
-                <Button size="small" color="primary">
+                <Button 
+                size="small" 
+                color="primary"
+                onClick={() => bookState.handleSaveBook(book)}>
                   Save
+                </Button>
+                <Button size="small" color="primary" href={book.volumeInfo.infoLink}>
+                  View Book
                 </Button>
               </CardActions>
             </Card>
