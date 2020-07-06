@@ -78,14 +78,21 @@ const Home = () => {
         {
           bookState.books.map(book => (
             <Card className={classes.root}>
-              <CardHeader
-                title={book.volumeInfo.title}
-              />
+              
                 <CardMedia
                   className={classes.media}
                   image={book.volumeInfo.imageLinks.thumbnail}
                   title={book.volumeInfo.title}
                 />
+              <CardHeader
+                title={book.volumeInfo.title}
+              />
+                <Typography>
+                {book.volumeInfo.authors}
+                </Typography>
+                <Typography>
+                  {book.volumeInfo.description}
+                </Typography>
 
               <CardActions>
                 <Button 

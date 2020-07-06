@@ -48,14 +48,21 @@ const Saved = () => {
       {
         bookState.books.map(book => (
           <Card className={classes.root}>
-            <CardHeader
-              title={book.title}
-            />
+            
             <CardMedia
               className={classes.media}
               image={book.image}
               title={book.title}
             />
+            <CardHeader
+              title={book.title}
+            />
+            <Typography>
+              {book.authors}
+            </Typography>
+            <Typography>
+              {book.description}
+            </Typography>
 
             <CardActions>
               <Button
