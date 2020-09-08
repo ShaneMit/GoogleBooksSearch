@@ -12,10 +12,21 @@ The software used to create this generator include: React, Material-UI, Node, Mo
 <br> 
 If the dependencies listed above did not appear in your package.json file after running npm init-i, please run the following commands:
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mongo: npm i mongoose
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MONGO: npm i mongoose
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AXIOS: npm i axios
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ENV: npm i dotenv
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EXPRESS: npm i express
 <br>
 
+## Usage
+
+
+## Demo
+
+
+
+
+## Future Development
