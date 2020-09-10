@@ -24,7 +24,7 @@ If the dependencies listed above did not appear in your package.json file after 
 ## Usage
 Google Books Search uses the Google Books API to allow the user to search for any book that they wish to find more information on. 
 
-When the user searches for a book title, they are presented with a card of information. The card includes a picture of the books cover, the title, the author, and a brief description. The card also gives the user the option to save the book to the saved section to view later. The user can also click the "VIEW BOOK" link on the card to be taken to the book's page on the Google Play Store.
+When the user searches for a book title, they are presented with a card of information. The card includes a picture of the book's cover, the title, the author, and a brief description. The card also gives the user the option to save the book to the saved section to view later. The user can also click the "VIEW BOOK" link on the card to be taken to the book's page on the Google Play Store.
 
 The user can keep a list of their saved books and delete them as needed.
 
