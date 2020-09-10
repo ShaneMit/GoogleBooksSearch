@@ -28,6 +28,8 @@ When the user searches for a book title, they are presented with a card of infor
 
 The user can keep a list of their saved books and delete them as needed.
 
+## Demo
+
 ![Demo Gif](public/assets/images/ReactApp.gif)
 
-## Future Development
+
